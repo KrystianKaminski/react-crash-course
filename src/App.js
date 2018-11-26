@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import uuid from 'uuid'
+import $ from 'jquery'
 import Projects from './components/Projects'
 import AddProject from './components/AddProject'
+import Todos from './components/Todos'
 import './App.css';
 
 class App extends Component {
@@ -12,7 +14,8 @@ class App extends Component {
     }
   }
 
-  componentWillMount() {
+
+  getProjects() {
     this.setState({
       projects: [{
         id: uuid.v4(),
@@ -31,6 +34,11 @@ class App extends Component {
       }]
     })
   }
+
+  componentWillMount() {
+    this.getProjects()
+  }
+
 
   handleAddProject(project) {
     let projects = this.state.projects

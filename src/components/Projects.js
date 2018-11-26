@@ -3,6 +3,10 @@ import ProjectItem from './ProjectItem';
 
 class Projects extends Component {
 
+    deleteProject(id) {
+        this.props.onDelete(id)
+    }
+
     render() {
         let projectItems;
 
@@ -13,6 +17,7 @@ class Projects extends Component {
                     <ProjectItem
                         key={project.title}
                         project={project}
+                        onDelete={this.deleteProject.bind(this)}
                     />
                 )
             })

@@ -3,7 +3,6 @@ import uuid from 'uuid'
 import $ from 'jquery'
 import Projects from './components/Projects'
 import AddProject from './components/AddProject'
-import Todos from './components/Todos'
 import './App.css';
 
 class App extends Component {
